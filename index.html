@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vaga de emprego Recife">
+  <meta name="keywords" content="Vaga hoje Recife, Trabalho em Recife, Emprego hoje em Recife, jovem aprendiz Recife">
+  <title>Recife-contrata</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .job-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+    .job-description {
+        margin-top: 1em;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        color: #555;
+        text-align: justify;
+    }
+    .whatsapp-icon {
+        width: 2em;
+        height: 2em;
+        margin-right: 0.5em;
+        transition: transform 0.2s ease-in-out;
+    }
+    .whatsapp-icon:hover {
+        transform: scale(1.2);
+    }
+    .contact-info {
+        margin-top: 2em;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .rectangle {
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        background-color: white;
+        padding: 2em;
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+
+        transition: transform 0.2s ease-in-out;
+    }
+    .rectangle:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    }
+    .container {
+      display:flex; 
+      align-items:center; 
+      justify-content:center; 
+      height:auto
+    }
+    .verification-seal {
+      display:flex; 
+      align-items:center; 
+      justify-content:center; 
+      width:50px; 
+      height:50px; 
+      border-radius:50%; 
+      background-color:#28a745; 
+      color:white; 
+      font-size:30px; 
+      margin:auto
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="rectangle">
+  <div style="display:flex; justify-content:center;">
+  <span style="color:#007bff;">Recife-contrata!</span>
+</div>
+    <div class="verification-seal">✓</div>
+    <div class="job-title">Recepcionista</div>
+    <div class="job-description">
+      Estamos procurando um recepcionista amigável e profissional para se juntar à nossa equipe. O candidato ideal terá excelentes habilidades de comunicação, será capaz de realizar várias tarefas ao mesmo tempo e terá uma atitude positiva.
+      <br><br>
+      Esta página foi visualizada <span id="view-counter">0</span> vezes.
+      <br><br>
+      Este anúncio foi verificado e aprovado por uma autoridade de alto nível.
+    </div>
+    <div class="contact-info">
+      <a href="https://wa.me/81987149244"><img class="whatsapp-icon" src="https://cdn.icon-icons.com/icons2/2201/PNG/512/whatsapp_logo_icon_134017.png" alt="Ícone do WhatsApp"></a>
+      Entre em contato conosco pelo WhatsApp
+    </div>
+  </div>
+</div>
+
+<script>
+  let viewCounter = document.querySelector('#view-counter');
+  let viewCount = parseInt(localStorage.getItem('viewCount')) || 0;
+
+  viewCount++;
+  localStorage.setItem('viewCount', viewCount);
+  viewCounter.textContent = viewCount.toLocaleString();
+
+  let scale = 1;
+  window.addEventListener('resize', () => {
+    let newScale = Math.min(window.innerWidth / 600, 1);
+    if (newScale !== scale) {
+      document.body.style.transform = `scale(${newScale})`;
+      scale = newScale;
+    }
+  });
+</script>
+</body>
+</html>
+        
